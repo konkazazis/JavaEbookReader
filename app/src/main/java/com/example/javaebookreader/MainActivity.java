@@ -75,8 +75,9 @@ public class MainActivity extends AppCompatActivity {
     private void loadEbookFromAssets() {
         try {
             AssetManager assetManager = getAssets();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(assetManager.open("sample.txt")));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(assetManager.open("algorithms.pdf")));
 
+            System.out.println(reader);
             StringBuilder stringBuilder = new StringBuilder();
             String line;
             int charsPerPage = 1000;  // Adjust this value based on how much text you want per page
